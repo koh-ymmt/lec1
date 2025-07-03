@@ -1,0 +1,90 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>デモ｜プログラミング入門の会</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./asset/style.css"
+    />
+    <script
+      type="module"
+      src="./asset/main.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="side-window"
+        id="status-window"
+      >
+        <div id="level-window">
+          <div id="level-label">LEVEL</div>
+          <div id="level">001</div>
+        </div>
+        <div id="score-window">
+          <div id="score-label">SCORE</div>
+          <div id="score">00000</div>
+        </div>
+      </div>
+      <main class="game-window">
+        <div id="game-area">
+          <div id="block-area"></div>
+          <div id="paddle"></div>
+        </div>
+        <div
+          class="hidden"
+          id="message-window"
+        >
+          <div
+            class="message hidden"
+            id="game-clear"
+          >
+            <p>LEVEL CLEAR</p>
+            <button id="next-button">NEXT LEVEL</button>
+          </div>
+          <div
+            class="message hidden"
+            id="game-over"
+          >
+            <p>GAME OVER</p>
+            <button id="restart-button">RESTART</button>
+          </div>
+          <div
+            class="message hidden"
+            id="game-pause"
+          >
+            <p>PAUSE</p>
+            <button id="resume-button">RESUME</button>
+            <button id="quit-button">QUIT</button>
+          </div>
+        </div>
+      </main>
+      <div class="side-window">
+        <div id="instruction-window">
+          <div id="instruction">
+            <p>USE L/R ARROW KEYS TO MOVE THE PADDLE</p>
+            <p>PRESS SPACE TO START BALLS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

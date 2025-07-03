@@ -1,0 +1,158 @@
+html {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(210 100% 10%),
+    hsl(210 100% 0%)
+  );
+  color: hsl(0deg 0% 100%);
+  font-size: 28px;
+  user-select: none;
+}
+
+* {
+  font-family: Doto;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: hsl(0 100% 100%);
+  color: black;
+  padding: 0.5em 1em;
+  font-size: inherit;
+}
+button:hover {
+  background-color: hsl(210 100% 60%);
+  color: white;
+  outline: solid 2px hsl(210 100% 60%);
+  outline-offset: 4px;
+}
+button:active {
+  background-color: hsl(210 100% 100%);
+  color: black;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.game-window {
+  border: solid 2px hsl(210 100% 80% / 0.9);
+  height: 600px;
+  width: 600px;
+  position: relative;
+}
+
+#game-area {
+  position: absolute;
+  inset: 0;
+}
+
+#paddle {
+  background-color: white;
+  height: 10px;
+  position: absolute;
+  top: 550px;
+  width: 120px;
+  opacity: 0.9;
+}
+
+.side-window {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#status-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#level-window,
+#score-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  width: 100%;
+}
+
+#message-window {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(0 0 0 / 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+#instruction-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+}
+#instruction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#block-area {
+  position: absolute;
+  top: 50px;
+  height: 150px;
+  width: 100%;
+  display: grid;
+  gap: 5px;
+  padding: 5px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.block {
+  background-color: hsl(210 100% 90%);
+  position: relative;
+}
+.ball {
+  background-color: hsl(210 100% 100%);
+  border-radius: 50%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
