@@ -5,7 +5,7 @@ import checkCollision from "./scripts/check-collision.js";
 import playBlockDestroySound from "./scripts/play-block-destroy-sound.js";
 import { audioContext } from "./scripts/audio-ctx.js";
 
-const balls = [new Ball("45%", 4), new Ball("55%", -4), new Ball("50%", 3)];
+const balls = [new Ball("50%", 4)];
 
 // DOM要素
 const elements = {
@@ -34,6 +34,10 @@ function init() {
   setupEventListeners();
   gameState.isGameRunning = true;
   gameLoop();
+  paddle.element.style.left =
+    elements.blockArea.getBoundingClientRect().width / 2 -
+    paddle.element.getBoundingClientRect().width / 2 +
+    "px";
 }
 
 // イベントリスナー設定

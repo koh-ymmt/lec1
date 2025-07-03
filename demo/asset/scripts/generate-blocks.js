@@ -1,6 +1,6 @@
 import generateColor from "./generate-color.js";
 
-const numberOfBlocks = 1;
+const numberOfBlocks = 24;
 const colorThemeIndex = 220;
 const colorDynamic = 15;
 
